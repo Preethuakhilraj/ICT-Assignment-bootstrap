@@ -44,24 +44,21 @@
                             <h2 class="p-3">Signup</h2>
                           </div>
                           <div class="card-body">
-                            <form action="#" method="POST">
-                                  <p>Please Signup to your account</p>
-                              <div class="mb-4 ">
-                                <label for="username" class="form-label">Username</label>
-                                <input type="text" class="form-control" id="username" />
-                              </div>
-                              <div class="mb-4 ">
-                                <label for="Email" class="form-label">Email</label>
-                                <input type="text" class="form-control" id="Email" />
-                              </div>
+                            <form id="signupForm" onsubmit="return validateSignUp()" action="index.html">
+                                <div class="mb-4 ">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="email" name="email" autocomplete="off" />
+                                    </div>
                               <div class="mb-4">
-                                <label for="Phone Number" class="form-label">Phone Number</label>
-                                <input type="number" class="form-control" id="phone" />
-                              </div>
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="text" class="form-control" id="phone" name="phone" autocomplete="off "/>
+                                  </div>
                               <div class="mb-4">
                                 <label for="password" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="password" />
-                              </div>
+                                <input type="password" class="form-control" id="password" name="password" onkeyup="checkPasswordStrength()" autocomplete="off"/>
+                                 <div class="password-strength">
+                                <div id="strengthBar" class="strength-bar"></div>
+                              </div></div>
                               <div class="mb-4">
                                 <input type="checkbox" class="form-check-input" id="remember" />
                                 <label for="remember" class="form-label">Remember Me</label>
@@ -69,6 +66,7 @@
                                <div class="mb-4">
                                 Don't have an account? <a href="index.html" class="signuplink" >Login now!</a>
                               </div>
+                              <span id="signupError" class="error"></span><br>
                               <div class="d-grid">
                                 <button type="submit" class="btn text-dark main-bg">Signup</button>
                               </div>
@@ -78,6 +76,5 @@
                     </div>
               </div>
               
-    </section>
-        </body>
+    </section><script src="validation.js"></script>          </body>
         </html>
